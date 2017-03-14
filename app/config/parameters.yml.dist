@@ -1,0 +1,17 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    database_host: 172.17.0.1
+    database_port: 3307
+    database_name: blog
+    database_user: root
+    database_password: 123456
+    mailer_transport: smtp
+    mailer_host: mailtrap.io
+    mailer_user: 47832a094f88cc8de
+    mailer_password: 636e4ad6d09862
+    secret: ThisTokenIsNotSoSecretChangeIt
+
+    # A secret key that's used to generate certain security-related tokens
+    secret: ThisTokenIsNotSoSecretChangeIt

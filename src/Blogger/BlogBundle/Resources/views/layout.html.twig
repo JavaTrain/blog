@@ -1,0 +1,14 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets filter='cssrewrite'
+    '@BloggerBlogBundle/Resources/public/css/blog.css'
+    %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet"/>
+    {% endstylesheets %}
+{% endblock %}
+
+{% block sidebar %}
+    Sidebar content
+{% endblock %}
