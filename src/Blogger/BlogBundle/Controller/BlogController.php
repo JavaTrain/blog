@@ -10,9 +10,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class BlogController extends Controller
 {
     /**
-     * Show a blog entry
+     * @param $id
+     * @param $slug
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function showAction($id)
+    public function showAction($id ,$slug)
     {
         $em = $this->getDoctrine()->getManager();
 

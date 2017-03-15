@@ -30,15 +30,21 @@ class CommentRepository extends EntityRepository
     }
 
     /**
-     * @param string $alias
-     * @param null   $indexBy
+     * @param int $limit
      *
-     * @return \Doctrine\ORM\QueryBuilder
+     * @return array
      */
-//    public function createQueryBuilder($alias, $indexBy = null)
-//    {
-//        return $this->_em->createQueryBuilder()
-//                         ->select($alias)
-//                         ->from($this->_entityName, $alias, $indexBy);
-//    }
+    public function getLatestComments($limit = 10)
+    {
+        $qb = $this->createQueryBuilder('c')
+                   ->select('c')
+                   ->addOrderBy('c.id', 'DESC');
+
+        if (!is_null($limit)) {
+            $qb->setMaxResults($limit);
+        }
+
+        return $qb->getQuery()
+                  ->getResult();
+    }
 }
