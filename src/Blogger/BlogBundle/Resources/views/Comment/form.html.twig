@@ -1,0 +1,8 @@
+<form action="{{ path('blogger_blog_comment_create' , { 'blog_id' : comment.blog.id }) }}" method="post" class="blogger" novalidate>
+
+    {{ form_widget(form) }}
+
+    <p>
+        <input type="submit" value="Submit">
+    </p>
+</form>

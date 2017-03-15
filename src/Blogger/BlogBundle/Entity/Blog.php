@@ -252,5 +252,13 @@ class Blog
         $this->setUpdated(new \DateTime());
     }
 
+    /**
+     * @return mixed
+     */
+    function __toString()
+    {
+        return $this->getTitle();
+    }
+
 
 }
